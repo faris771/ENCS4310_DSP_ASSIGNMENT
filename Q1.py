@@ -7,27 +7,18 @@ ID: 1200546
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-
-# Q1_B
-LL = 0  # UPPER LIMIT
-UL = 50  # LOWER LIMIT
-
+# Q1_C
+LL = -10  # UPPER LIMIT
+UL = 9  # LOWER LIMIT
 n = np.arange(LL, UL + 1)
-mean = 0
-variance = 1
-sigma = np.sqrt(variance)
-w = np.random.normal(mean, sigma, size=len(n))
+z = [5 - i % 5 for i in n]
 
-print(w)
-
-y = [(0.04 * np.pi * i + 0.2 * w[i]) for i in n]  # APPENDING EACH VALUE OF y[i] into to the list y
 
 plt.grid()
-plt.stem(n, y)
+plt.stem(n, z)
 plt.xlabel('n')
-# plt.xticks(n)
-plt.ylabel('y[n]')
-plt.title('Discrete-time signal y[n]')
-plt.savefig("q1_B.png")
+plt.xticks(n)
+plt.ylabel('Z[n]')
+plt.title('Q1_C')
+plt.savefig("q1_C.png")
 plt.show()
