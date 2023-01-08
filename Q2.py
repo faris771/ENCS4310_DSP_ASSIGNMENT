@@ -26,7 +26,7 @@ plt.xlabel('n')
 plt.ylabel('g[n]')
 plt.title('Q2_A')
 # plt.savefig("q1_C.png")
-plt.subplot()
+# plt.subplot()
 
 
 plt.show()
