@@ -1,8 +1,3 @@
-"""
-AUTHOR: FARIS ABUFARHA
-ID: 1200546
-
-"""
 
 import matplotlib.pyplot as plt
 import numpy as np
