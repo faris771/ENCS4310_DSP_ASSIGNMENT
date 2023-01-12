@@ -16,6 +16,8 @@ plt.xlabel('n')
 plt.ylabel('r[n]')
 plt.yticks()
 plt.show()
+plt.savefig('Q7_A.png', dpi=100)
+
 
 ## Q7_B
 yn = [xn[i-4] + w[i] for i in n]
@@ -27,6 +29,7 @@ plt.xlabel('n')
 plt.ylabel('r[n]')
 plt.yticks()
 plt.show()
+plt.savefig('Q7_B.png', dpi=100)
 
 
 
