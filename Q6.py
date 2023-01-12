@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.signal import convolve
+
 import os
 
 
@@ -36,7 +38,8 @@ plt.ylabel('h[n]')
 plt.savefig('plots/Q6_H.png')
 plt.show()
 
-yn = np.convolve(xn, hn)
+#FIX BUG !!!!!!
+yn = convolve(xn, hn)
 plt.stem(yn)
 plt.xlabel('n')
 plt.ylabel('y[n]')
