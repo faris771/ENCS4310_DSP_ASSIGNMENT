@@ -31,27 +31,33 @@ LL = -5
 UL = 30
 n = np.arange(LL, UL + 1)
 rec = [5 * (unit_step(n, 0)[i - LL] - unit_step(n, -20)[i- LL]) for i in n]
-
+plt.subplot(2, 1, 1)
 plt.stem(n, rec)
+
 plt.grid()
-plt.show()
-plt.savefig('Q9_A.png')
+plt.xlabel('n')
+plt.ylabel('x[n]')
+plt.title('Rectangular Pulse')
 
 yn = rec - np.roll(rec, +1) # ask about this
 
+plt.subplot(2, 1, 2)
 plt.stem(n, yn)
 plt.grid()
+plt.xlabel('n')
+plt.ylabel('y[n]')
 plt.show()
 
 # b
 
 trig = [i * (unit_step(n, 0)[i- LL] - unit_step(n, -10)[i- LL]) + (20 - i) * (unit_step(n, -10)[i- LL] - unit_step(n, -20)[i- LL]) for i
         in n]
+plt.subplot(2, 1, 1)
 plt.stem(n, trig)
 plt.grid()
-plt.show()
 plt.savefig('Q9_B.png')
 yn = trig - np.roll(trig, 1) # ask about this
+plt.subplot(2, 1, 2)
 plt.stem( yn)
 plt.grid()
 plt.show()
@@ -61,11 +67,12 @@ LL = 0
 UL = 100
 n = np.arange(LL, UL + 1)
 sinus = [np.sin(np.pi * i / 25) * (unit_step(n, 0)[i- LL] - unit_step(n, -100)[i- LL]) for i in n]
+plt.subplot(2, 1, 1)
 plt.stem(n, sinus)
 plt.grid()
-plt.show()
 
 yn = sinus - np.roll(sinus, 1) # ask about this
+plt.subplot(2, 1, 2)
 plt.stem(n, yn)
 plt.grid()
 plt.show()

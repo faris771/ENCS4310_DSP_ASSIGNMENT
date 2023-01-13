@@ -11,7 +11,7 @@ hn = np.array([2, 3, 0, -5, 2, 1])
 ny = np.arange(-4, 7 + 1)
 
 # find y[n]
-yn = np.convolve(xn, hn)
+yn = np.convolve(xn, hn, 'full')
 
 # plot y[n]
 plt.stem(yn)
@@ -19,5 +19,5 @@ plt.grid()
 plt.title('Q4')
 plt.xlabel('n')
 plt.ylabel('y[n]')
-plt.savefig('Q4.png', dpi=100)
+# plt.savefig('Q4.png', dpi=100)
 plt.show()
