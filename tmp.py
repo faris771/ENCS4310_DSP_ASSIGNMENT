@@ -1,12 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import os
-import random
-import scipy as scp
-from scipy.signal import lfilter, lfilter_zi
 
+# Define the input sequence
+x = np.zeros(100)
+x[:20] = 5
 
-delta = np.concatenate((np.array([5]),np.zeros(80)))
-plt.stem(delta)
-plt.grid()
+# Implement the differentiator
+y = np.zeros(100)
+y[1:] = x[1:] - x[:-1]
+
+# Plot the input and output sequences
+plt.figure()
+plt.stem(x)
+plt.title("Input sequence (rectangular pulse)")
+
+plt.figure()
+plt.stem(y)
+plt.title("Output sequence (simple differentiator)")
 plt.show()
